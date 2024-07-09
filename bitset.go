@@ -17,7 +17,7 @@ type Bitset struct {
 	buf []byte
 }
 
-func NewBitstring(size int) *Bitset {
+func NewBitset(size int) *Bitset {
 	return &Bitset{buf: make([]byte, (size/8)+1)}
 }
 

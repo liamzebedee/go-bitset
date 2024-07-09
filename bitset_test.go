@@ -5,19 +5,19 @@ import (
 )
 
 func TestBitstring(t *testing.T) {
-	b := NewBitstring(10)
-	if b.IsSet(0) {
+	b := NewBitset(10)
+	if b.Contains(0) {
 		t.Errorf("Expected bit 0 to be unset")
 	}
-	b.SetBit(0)
-	if !b.IsSet(0) {
+	b.Insert(0)
+	if !b.Contains(0) {
 		t.Errorf("Expected bit 0 to be set")
 	}
-	if b.IsSet(1) {
+	if b.Contains(1) {
 		t.Errorf("Expected bit 1 to be unset")
 	}
-	b.SetBit(1)
-	if !b.IsSet(1) {
+	b.Insert(1)
+	if !b.Contains(1) {
 		t.Errorf("Expected bit 1 to be set")
 	}
 }
